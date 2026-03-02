@@ -62,15 +62,30 @@ window#waybar {
   /* padding: 0 5px; */
 }
 
+#battery.warning {
+  color: @error;
+}
+
 #battery.charging {
   color: @tertiary;  
 }
 
-#battery.warning {
-  color: @error;
-}
 #tray {
   margin-right: 16px;
+  border-right: 1px solid @outline_variant;
+  padding-right: 10px;
+}
+
+#tray menu{
+    background-color: @surface;
+    border: 1px solid @primary;
+    border-radius: 4px;
+    padding: 5px 0px;
+}
+
+#tray menuitem:hover {
+    background-color: @primary;
+    color: @on_primary;
 }
 
 #bluetooth {
@@ -101,12 +116,4 @@ tooltip {
   opacity: 0;
 }
 
-#custom-screenrecording-indicator {
-  min-width: 12px;
-  margin-left: 8.75px;
-  font-size: 10px;
-}
 
-#custom-screenrecording-indicator.active {
-  color: #a55555;
-}

@@ -5,7 +5,7 @@ window-decoration = false
 #theme=GitHub Dark
 #theme=3024 Day
 shell-integration = fish
-
+shell-integration-features = ssh-terminfo,ssh-env
 window-padding-x=10
 window-padding-y=7
 

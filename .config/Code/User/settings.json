@@ -30,7 +30,7 @@
     // "workbench.experimental.layoutControl.enabled": true,
     "explorer.confirmDelete": false,
     "[cpp]": {
-        "editor.defaultFormatter": "ms-vscode.cpptools"
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
     },
     "codesnap.shutterAction": "copy",
     "leetcode.endpoint": "leetcode",
