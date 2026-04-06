@@ -301,6 +301,9 @@
     ],
     "terminal.integrated.suggest.enabled": false,
     "chat.viewSessions.orientation": "stacked",
-    "editor.unicodeHighlight.invisibleCharacters": false
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "[astro]": {
+        "editor.defaultFormatter": "astro-build.astro-vscode"
+    }
     //end vim settings
 }
