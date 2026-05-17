@@ -304,6 +304,9 @@
     "editor.unicodeHighlight.invisibleCharacters": false,
     "[astro]": {
         "editor.defaultFormatter": "astro-build.astro-vscode"
+    },
+    "[lua]": {
+        "editor.defaultFormatter": "yinfei.luahelper"
     }
     //end vim settings
 }

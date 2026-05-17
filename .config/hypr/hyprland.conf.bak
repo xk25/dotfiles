@@ -31,7 +31,7 @@ xwayland {
 # Set programs that you use
 $terminal = alacritty
 $fileManager = nautilus -w
-# $menu = ~/.config/rofi/runner.sh
+$menu_alt = ~/.config/rofi/runner.sh
 $menu = vicinae toggle
 # $clipboard = ~/.config/rofi/clipboard.sh
 $clipboard = vicinae deeplink vicinae://launch/clipboard/history?toggle=true
@@ -49,6 +49,7 @@ $rofiswitch = ~/.config/rofi/rofi_wswitch
 
 # exec-once = gsettings set org.gnome.desktop.interface cursor-theme Adwaita
 exec-once = hypridle
+exec-once = vicinae server
 # exec-once = hyprpanel
 exec-once = waybar
 exec-once = swayosd-server
@@ -127,7 +128,7 @@ decoration {
 }
 
 cursor {
-    no_hardware_cursors = 1
+    no_hardware_cursors = 0
 }
 # https://wiki.hyprland.org/Configuring/Variables/#animations
 # animations {
@@ -196,7 +197,7 @@ windowrule = match:float 0, match:workspace w[tv1], border_size 0
 
 # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
 dwindle {
-    pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+    # pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
     preserve_split = true # You probably want this
 }
 
@@ -213,7 +214,7 @@ misc {
     force_default_wallpaper = 0 # Set to 0 or 1 to disable the anime mascot wallpapers
     disable_hyprland_logo = true # If true disables the random hyprland logo / anime girl background. :(
 	  # vfr = true
-    vfr = 1
+    # vfr = 1
     vrr = 1
 }
 
@@ -274,9 +275,9 @@ bind = $mainMod, B, exec, zen-browser
 bind = $mainMod, C, exec, code
 bind = $mainMod, Z, exec, zeditor
 bind = $mainMod, F, togglefloating,
-bind = $mainMod, R, exec, $menu
+bind = $mainMod, R, exec, $menu_alt
 bind = $mainMod, P, pseudo, # dwindle
-bind = $mainMod, J, togglesplit, # dwindle
+# bind = $mainMod, J, togglesplit, # dwindle
 
 # Move focus with mainMod + arrow keys
 bind = $mainMod, left, movefocus, l
@@ -336,8 +337,6 @@ bind = ALT, SPACE, exec, $menu
 bind = ,Print, exec, $screenshot
 bind = $mainMod, X, exec , $powermenu
 
-# bind = $mainMod ALT, H, exec , hyprpanel -q; hyprpanel
-# bind = $mainMod, H, exec, hyprpanel toggleWindow bar-0
 # bind = $mainMod ALT, H, exec , killall waybar; waybar
 
 bind = $mainMod, H, exec, killall waybar 2>/dev/null || waybar
@@ -479,7 +478,7 @@ windowrule {
   float = on
   size = 100 400
 #   move = (monitor_w-window_w) (monitor_h-window_h-35)
-  match:class = ^(org.netrs.ui)$
+  match:class = ^(org.nmrs.ui)$
 #   no_max_size = on
 }
 
@@ -494,3 +493,20 @@ layerrule {
 ###############
 ###  Plugins ###
 ################
+# bind = SUPER, g, scrolloverview:overview, toggle
+# plugin {
+#     scrolloverview {
+#         gesture_distance = 300 # how far is the "max" for the gesture
+#         scale = 0.5 # preferred overview scale
+#         workspace_gap = 100
+#         wallpaper = 0 # 0: global only, 1: per-workspace only, 2: both
+#         blur = true # blur only the main overview wallpaper
+#
+#         shadow {
+#             enabled = false
+#             range = 50
+#             render_power = 3
+#             color = rgba(1a1a1aee)
+#         }
+#     }
+# }

@@ -56,7 +56,8 @@
     "clock": {
         "format": "{:L%d %B %I:%M}",
         "format-alt": "{:L%A %d %B W%V %Y}",
-        "tooltip": false,
+        "tooltip": true,
+        "tooltip-format": "<tt>{calendar}</tt>"
     },
     "network": {
         "format-icons": [
